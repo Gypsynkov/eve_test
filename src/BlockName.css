@@ -1,0 +1,31 @@
+.blockName{
+    width: 320px;
+    max-height: 380px;
+font-size: 0.6rem;
+background-color: red;
+border: 1px solid black;
+}
+.blockName_card-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid white;
+  }
+.blockNameDesc{
+    position: absolute;
+    max-width: 320px;
+    max-height: 350px;
+    opacity: 1;
+    background-color: blueviolet;
+    animation: visible 0.5s 1;
+  }
+
+  @keyframes visible {       
+    from { max-height: 0px;
+    opacity: 0; }         
+    to { max-height: 350px;
+    opacity: 1; } 
+  }
