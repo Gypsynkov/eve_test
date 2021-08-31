@@ -8,12 +8,7 @@ class Modal extends Component {
     activeModal: this.props.active,
     activeCeo: false
   };
-  componentDidMount() {
-    console.log("Props from app", this.props.active);
-    if (this.props.active) {
-      console.log("Can render");
-    }
-  }
+
   closeModal = () => {
     this.setState({ activeModal: false });
     this.props.showModal(false);
@@ -36,12 +31,12 @@ this.setState({activeCeo:true})
           }
         >
           <div onClick={this.closeModal} className="headerContent">
-            Close
+           <div className="button__close">Скрыть</div> 
           </div>
           <div className="modal__main">
             <div className="modal__content__corporation">
               <div>Имя: {name} </div>
-              <div onClick={this.showCeoInfo}>CEO: {this.props.ceo.name} </div>
+              <div className="modal__content__ceo" onClick={this.showCeoInfo}>CEO: {this.props.ceo.name} </div>
               <div>Число участников: {member_count} </div>
               <div>Описание: {description} </div>
             </div>

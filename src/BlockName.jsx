@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import EVEService from "./services/eveservices";
 import "./BlockName.css";
 
@@ -32,7 +32,7 @@ class BlockName extends Component {
       });
     });
   }
-  showDescription = (e) => {
+  showDescription = () => {
     if (this.state.display === false) {
       this.setState({ display: true });
     } else {
@@ -45,8 +45,8 @@ class BlockName extends Component {
   }
 
   render() {
-    const { name, description, corp_id, showModal } = this.props;
-    const { system_name, modal_active, display, corporation_name } = this.state;
+    const { name, description } = this.props;
+    const { system_name,  display, corporation_name } = this.state;
     return (
       <div>
       <div className="blockName">
@@ -58,7 +58,7 @@ class BlockName extends Component {
             <div className="card-body">
               <p className="card-text">{description}</p>
               <p className="card-text">Система: {system_name}</p>
-              <p onClick={this.modalInfo} className="card-text">Корпорация: {corporation_name}</p>
+              <p onClick={this.modalInfo} className="card-text corporation">Корпорация: {corporation_name}</p>
             </div>
           </div>
         )}

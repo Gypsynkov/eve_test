@@ -3,10 +3,14 @@ import "./App.css";
 import EveService from "./services/eveservices";
 import BlockName from "./BlockName";
 import Modal from "./Modal";
+import Header from "./Header";
 
-class App extends Component {
+
+
+
+
+class App extends Component  {
   eveService = new EveService();
-
   state = {
     factions: [],
     active: false,
@@ -26,7 +30,7 @@ class App extends Component {
     });
   }
 
-  showModal = (value) => {
+  showModal = (value)=> {
  
 
     if (value.modal_active) {
@@ -45,7 +49,10 @@ class App extends Component {
   render() {
     const { active, corporation, ceo } = this.state;
     return (
+      <div>
+      <Header />
       <div className="App">
+   
         {active && (
           <Modal
             corporation={corporation}
@@ -67,6 +74,7 @@ class App extends Component {
             />
           );
         })}
+      </div>
       </div>
     );
   }

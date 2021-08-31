@@ -2,8 +2,9 @@
     width: 320px;
     max-height: 380px;
 font-size: 0.6rem;
-background-color: red;
-border: 1px solid black;
+ background-color: gray;
+
+color: white;
 }
 .blockName_card-header{
     display: flex;
@@ -12,8 +13,19 @@ border: 1px solid black;
     height: 32px;
     width: 100%;
     text-align: center;
-    border: 2px solid white;
+    background-color: red;
+    color: white;
+    border: 1px solid yellow;
+    cursor: pointer;
+    animation: visible 0.5s 1;
   }
+
+  .blockName_card-header:hover{
+    border: 1px solid red;
+    color: red;
+    background-color: white;
+  }
+
 .blockNameDesc{
     position: absolute;
     max-width: 320px;
@@ -21,6 +33,13 @@ border: 1px solid black;
     opacity: 1;
     background-color: blueviolet;
     animation: visible 0.5s 1;
+    border-radius: 10px;
+  }
+.card-text.corporation{
+cursor: pointer;
+}
+.card-text.corporation:hover{
+  color: yellow
   }
 
   @keyframes visible {       

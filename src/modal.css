@@ -19,7 +19,10 @@
 .modal__content{
     padding: 20px;
     border-radius: 12px;
-    background-color: black;
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+
     width: 70vw;
     height: 400px;
     transform: scale(0.5);
@@ -37,6 +40,32 @@
 }
 .modal__content__corporation{
     width: 50%;
+}
+.modal__content__ceo{
+cursor: pointer;
+}
+.modal__content__ceo:hover{
+    color: blue;
+    }
+.headerContent{
+   width: 100%;
+   text-align: center;
+   display: flex;
+  justify-content: center;
+}
+
+.button__close{
+    background-color: gray;
+    border: 1px solid red;
+    width: 10%;
+    border-radius: 15px;
+}
+
+.button__close:hover{
+    background-color: rgb(212, 194, 194);
+    cursor: pointer;
+    width: 10%;
+    border-radius: 15px;
 }
 
 .modal__main{
